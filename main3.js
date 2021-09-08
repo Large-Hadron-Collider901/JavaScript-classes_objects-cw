@@ -17,20 +17,23 @@ class Student {
     this.grades = []; // pass in grades parameter
   }
   setStudentName() {
+    // create method for changing student name
     this.studentName = prompt(
-      `Please enter a new name for ${this.studentName}`
+      `Please enter a new name for ${this.studentName}` // prompts user for name
     );
   }
   addGrades() {
+    // create method for adding grades
     let grade = {
+      // use object literal notation to add assignment name and assignment score to grade and push to grades array
       assignmentName: prompt(
-        `Please enter your assignment name for ${this.studentName} in the box below`
+        `Please enter your assignment name for ${this.studentName} in the box below` // prompt for assignment name
       ),
       assignmentScore: prompt(
-        `Please enter the score your project recieved in the box below`
+        `Please enter the score your project recieved in the box below` // prompt for assignment score
       ),
     };
-    this.grades.push(`${grade.assignmentName} ${grade.assignmentScore}`);
+    this.grades.push(`${grade.assignmentName} ${grade.assignmentScore}`); // push assignment name and score to grades array
   }
   print() {
     // create print method
@@ -40,10 +43,10 @@ class Student {
     );
   }
 }
-let student1 = new Student("Jane Doe", "Code201");
-let student2 = new Student("John Doe", "Code201");
-student2.setStudentName();
-student1.addGrades();
-student2.addGrades();
-student1.print();
-student2.print();
+let student1 = new Student("Jane Doe", "Code201"); // create student 1 and pass in attributes for student 1
+let student2 = new Student("John Doe", "Code201"); // create student 2 and pass in attributes for student 2
+student2.setStudentName(); // change student2 name
+student1.addGrades(); // add grades for student 1
+student2.addGrades(); // add grades for student 2
+student1.print(); // print student 1 object
+student2.print(); // print student 2 object
